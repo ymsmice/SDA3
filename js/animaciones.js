@@ -119,7 +119,7 @@ const sonidoNocheOff = new Audio("Media/Sonidos/gallo.mp3");
 sonidoNocheOn.volume = 0.25;
 sonidoNocheOff.volume = 0.25;
 
-// Suavizar transición global
+// Suavizar transicion
 document.body.style.transition = "background-color 0.8s ease, color 0.8s ease";
 
 const btnModoNoche = document.getElementById("modoNocheBtn");
@@ -169,7 +169,7 @@ function desactivarModoNoche() {
   sonidoNocheOff.play();
   localStorage.setItem("modoNoche", "false");
 
-  // transición elegante de vuelta
+  // transicion vuelta
   document.body.style.opacity = "0";
   setTimeout(() => {
     location.reload();
@@ -177,7 +177,6 @@ function desactivarModoNoche() {
 }
 
 document.addEventListener("keydown", (e) => {
-  // Evita activarlo si estás escribiendo en un input
   const etiqueta = document.activeElement.tagName.toLowerCase();
   if (etiqueta === "input" || etiqueta === "textarea") return;
 
