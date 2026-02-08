@@ -101,11 +101,13 @@ hologramas.forEach(holo => {
 //gatito
 const sonidoHover = new Audio("Media/Sonidos/meow.mp3");
 sonidoHover.volume = 0.25;
-
-document.querySelectorAll("a").forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    sonidoHover.currentTime = 0;
-    sonidoHover.play();
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      sonidoHover.currentTime = 0;
+      sonidoHover.play();
+    });
   });
 });
 
