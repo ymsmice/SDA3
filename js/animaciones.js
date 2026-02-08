@@ -111,50 +111,8 @@ elementosSonido.forEach(el => {
     hoverSound.play();
   });
 });
-//modo noche
 
-const btnModoNoche = document.getElementById("modoNocheBtn");
-if (localStorage.getItem("modoNoche") === "true") {
-  activarModoNoche();
-}
-
-if (btnModoNoche) {
-  btnModoNoche.addEventListener("click", () => {
-    if (localStorage.getItem("modoNoche") === "true") {
-      desactivarModoNoche();
-    } else {
-      activarModoNoche();
-    }
-  });
-}
-
-function activarModoNoche() {
-  document.body.style.backgroundColor = "#1c1c1c";
-  document.body.style.color = "#FFE9EF";
-
-  document.querySelectorAll(".navbar, footer").forEach(el => {
-    el.style.backgroundColor = "#2a2a2a";
-  });
-
-  document.querySelectorAll(".card").forEach(card => {
-    card.style.backgroundColor = "#333";
-    card.style.color = "#FFE9EF";
-  });
-
-  document.querySelectorAll("a").forEach(a => {
-    a.style.color = "#FF9CB5";
-  });
-
-  localStorage.setItem("modoNoche", "true");
-}
-
-function desactivarModoNoche() {
-  location.reload(); // vuelve al modo normal
-  localStorage.setItem("modoNoche", "false");
-}
-//transicion modo noche
-
-// Sonidos
+// Sonidos y modo noche consolidado
 const sonidoNocheOn = new Audio("Media/Sonidos/búho.mp3");
 const sonidoNocheOff = new Audio("Media/Sonidos/gallo.mp3");
 
@@ -203,7 +161,7 @@ function activarModoNoche(reproducirSonido) {
     a.style.color = "#FF9CB5";
   });
 
-  btnModoNoche.innerText = "☀️ Modo día";
+  if (btnModoNoche) btnModoNoche.innerText = "☀️ Modo día";
   localStorage.setItem("modoNoche", "true");
 }
 
@@ -217,6 +175,7 @@ function desactivarModoNoche() {
     location.reload();
   }, 600);
 }
+
 document.addEventListener("keydown", (e) => {
   // Evita activarlo si estás escribiendo en un input
   const etiqueta = document.activeElement.tagName.toLowerCase();
