@@ -167,6 +167,7 @@ function activarModoNoche(reproducirSonido) {
 
 function desactivarModoNoche() {
   sonidoNocheOff.play();
+  setTimeout(() => {location.reload();}, 1600);
   localStorage.setItem("modoNoche", "false");
 
   // transicion vuelta
