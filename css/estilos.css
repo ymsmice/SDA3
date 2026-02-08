@@ -1,0 +1,151 @@
+body {
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  background-color: #FFE9EF;
+  color: #333;
+  cursor: url("../Media/Imágenes/cursor1.png"), auto;
+}
+
+/*cursor*/
+a:hover,
+button:hover,
+.btn:hover {
+  cursor: url("../Media/Imágenes/cursor2.png"), pointer;
+}
+
+/*navbar*/
+.navbar {
+  background-color: #FC809F !important;
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #FFE9EF !important;
+}
+
+/* titulos*/
+h1, h2, h3 {
+  color: #FC809F;
+  text-align: center;
+}
+
+/*texto*/
+p {
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/*posicion media*/
+img,
+video,
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/*video cont*/
+.video-container {
+  background-color: #FFBCCD;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+//botones
+.btn {
+  background-color: #FF9CB5;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #FC809F;
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+//cards
+.card {
+  background-color: #FFC9D7;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(252, 128, 159, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(252, 128, 159, 0.5);
+}
+
+.card-title {
+  color: #FC809F;
+  font-weight: bold;
+}
+
+//enlaces
+a {
+  color: #FC809F;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #FF9CB5;
+  transform: scale(1.05);
+}
+
+//piedepag
+footer {
+  background-color: #FF9CB5;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+//glowrosa
+.glow {
+  box-shadow: 0 0 10px #FC809F,
+              0 0 20px #FF9CB5,
+              0 0 40px #FFBCCD;
+}
+
+//brillocursor
+.btn:hover,
+a:hover {
+  box-shadow: 0 0 8px #FC809F,
+              0 0 16px #FF9CB5,
+              0 0 25px #FFBCCD;
+}
+
+/efectovr
+.card {
+  perspective: 1000px;
+}
+
+.card:hover {
+  transform: rotateX(4deg) rotateY(-4deg) translateY(-10px);
+}
+
+//transpag
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+//efectovides
+video,
+iframe {
+  box-shadow: 0 0 15px rgba(252, 128, 159, 0.6);
+}
+
+video:hover,
+iframe:hover {
+  box-shadow: 0 0 30px rgba(252, 128, 159, 0.9);
+}
