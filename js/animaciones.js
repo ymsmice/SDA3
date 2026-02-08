@@ -99,8 +99,15 @@ hologramas.forEach(holo => {
   });
 });
 //gatito
-const hoverSound = new Audio("Media/Sonidos/meow.mp3");
-hoverSound.volume = 0.2;
+const sonidoHover = new Audio("Media/Sonidos/meow.mp3");
+sonidoHover.volume = 0.25;
+
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    sonidoHover.currentTime = 0;
+    sonidoHover.play();
+  });
+});
 
 // elementos con sonido
 const elementosSonido = document.querySelectorAll("a, .btn, .card");
