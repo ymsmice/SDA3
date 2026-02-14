@@ -198,3 +198,29 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.querySelector("form");
+  const sonidoEnviar = new Audio("audio/send.mp3");
+  sonidoEnviar.volume = 0.4;
+
+  if (form) {
+
+    form.addEventListener("submit", function(e) {
+
+      e.preventDefault(); // detenemos envío inmediato
+
+      sonidoEnviar.play(); // sonido
+
+      alert("✨ Tu mensaje fue enviado correctamente 💗");
+
+      // Esperamos 1 segundo antes de enviar realmente
+      setTimeout(() => {
+        form.submit();
+      }, 1000);
+
+    });
+
+  }
+
+});
