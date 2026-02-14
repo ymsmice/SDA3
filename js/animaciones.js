@@ -201,7 +201,7 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("form");
-  const sonidoEnviar = new Audio("audio/send.mp3");
+  const sonidoEnviar = new Audio("Media/Sonidos/alert.mp3");
   sonidoEnviar.volume = 0.4;
 
   if (form) {
