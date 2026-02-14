@@ -206,11 +206,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (form) {
 
-    form.addEventListener("submit", function(e) {
+    form.addEventListener("submit", () => {
 
-      e.preventDefault(); // detenemos envío inmediato
-
-      sonidoEnviar.play(); // sonido
+     sonidoEnviar.play(); // sonido
 
       alert("✨ Tu mensaje fue enviado correctamente 💗");
 
