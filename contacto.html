@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="Media/Imágenes/favicat.png">
   <link rel="icon" type="image/png" sizes="32x32" href="Media/Imágenes/favicat.png">
   <link rel="icon" type="image/png" sizes="16x16" href="Media/Imágenes/favicat.png">
-  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="manifest" href="img/site.webmanifest"> 
   <meta name="msapplication-TileColor" content="#FC809F">
   <meta name="theme-color" content="#FC809F">
 </head>
@@ -30,12 +30,13 @@
   </div>
 </nav>
 
-<!-- CONTact -->
+   <!--CONTCTO-->
+
 <div class="container my-5">
   <h1 class="text-center mb-4">Contáctanos</h1>
 
   <form 
-    action="https://formsubmit.co/ajax/"
+    action="https://formsubmit.co/sda3realidadvirtual@gmail.com"
     method="POST"
     class="mx-auto"
     style="max-width: 500px;"
@@ -50,18 +51,30 @@
       <label class="form-label">Mensaje</label>
       <textarea name="mensaje" class="form-control" rows="5" required></textarea>
     </div>
-
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Nuevo contacto - Realidad Virtual">
 
-    <input type="hidden" name="_autoresponse" value="
-<h2>Holi 💗</h2>
+    <!--autorespuesta -->
+    <input
+      type="hidden"
+      name="_autoresponse"
+      value="
+<p>Hola 💗</p>
+
 <p>Gracias por contactar con <strong>Realidad Virtual</strong>.</p>
+
 <p>Hemos recibido tu mensaje correctamente y nos pondremos en contacto contigo lo antes posible.</p>
+
 <p>Un saludo,<br>ymsmice</p>
-<br>
-<img src='https://ymsmice.github.io/SDA3/Media/Imágenes/vikivr.jpg' width='400'>
-">
+
+<img 
+  src='https://ymsmice.github.io/SDA3/Media/Imágenes/vikivr.jpg'
+  width='500'
+>
+"
+    >
+
+    <input type="hidden" name="_next" value="enviado.html">
 
     <div class="text-center">
       <button type="submit" class="btn btn-primary">
@@ -70,9 +83,9 @@
     </div>
 
   </form>
+</div>
 
 
 <script src="js/animaciones.js"></script>
-
 </body>
 </html>
